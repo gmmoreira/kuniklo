@@ -12,12 +12,12 @@ RSpec.describe Wirelevel::Operations::CreateSocket do
     it { expect(subject.call.value).to be_kind_of(Wirelevel::Socket) }
   end
 
-  context 'when TCP socket throw error' do
+  context 'when connection is refused' do
     before do
-      expect(Socket).to receive(:tcp).and_raise(IOError)
+      expect(Socket).to receive(:tcp).and_raise(Errno::ECONNREFUSED)
     end
 
     it { expect(subject.call).to be_failure }
-    it { expect(subject.call.value).to be_kind_of IOError }
+    it { expect(subject.call.value).to be_kind_of Errno::ECONNREFUSED }
   end
 end

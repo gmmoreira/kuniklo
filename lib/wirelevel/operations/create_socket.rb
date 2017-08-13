@@ -4,10 +4,13 @@ class Wirelevel::Operations::CreateSocket
   def call(settings = Settings)
     Try() do
       Socket.tcp settings.host, settings.port
-    end.to_either.fmap -> socket { Wirelevel::Socket.new(socket) }
+    end
+      .to_either
+      .fmap -> socket { Wirelevel::Socket.new(socket) }
+  end
+
+  Container.register('wirelevel.operations.create_socket') do
+    self.new
   end
 end
 
-Container.register('wirelevel.operations.create_socket') do
-  Wirelevel::Operations::CreateSocket.new
-end
