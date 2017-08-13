@@ -14,19 +14,20 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
+require 'simplecov'
+SimpleCov.start
+
 lib = File.expand_path("../../lib", __FILE__)
 $LOAD_PATH.unshift lib
 
 require 'pry'
-
 require 'config'
-
+require 'support/read_fixture'
 require 'dry-amqp-client'
 require 'dry/container/stub'
 
 Container.enable_stubs!
 
-require 'support/read_fixture'
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
