@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 RSpec.describe Wirelevel::Operations::ReadSocket do
@@ -7,7 +9,7 @@ RSpec.describe Wirelevel::Operations::ReadSocket do
 
   context 'when read successfully' do
     before do
-      expect(socket).to receive(:read).with(2 ** 16)
+      expect(socket).to receive(:read).with(2**16)
     end
 
     it { is_expected.to be_success }
@@ -15,7 +17,7 @@ RSpec.describe Wirelevel::Operations::ReadSocket do
 
   context 'when read throw Error' do
     before do
-      expect(socket).to receive(:read).with(2 ** 16).and_raise(IOError)
+      expect(socket).to receive(:read).with(2**16).and_raise(IOError)
     end
 
     it { is_expected.to be_failure }

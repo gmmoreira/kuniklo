@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 class Wirelevel::Operations::ReadFrame
   include Transaction::Operation
 
-  HEADER_PATTERN = "CnN"
+  HEADER_PATTERN = 'CnN'
 
   def call(socket)
     Try() do

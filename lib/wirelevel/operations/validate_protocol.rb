@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Wirelevel::Operations::ValidateProtocol
   include Transaction::Operation
 
@@ -18,4 +20,3 @@ class Wirelevel::Operations::ValidateProtocol
     Wirelevel::Operations::ValidateProtocol.new
   end
 end
-

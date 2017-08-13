@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 RSpec.describe Wirelevel::Operations::ReadFrame do
@@ -11,10 +13,10 @@ RSpec.describe Wirelevel::Operations::ReadFrame do
 
   context 'valid frame' do
     let(:data) do
-      "\x01" +
-        "\x00\x00" +
-        "\x00\x00\x00\x04" +
-        "AMQP" +
+      "\x01" \
+        "\x00\x00" \
+        "\x00\x00\x00\x04" \
+        'AMQP' +
         "\xCE".b
     end
 
@@ -22,7 +24,7 @@ RSpec.describe Wirelevel::Operations::ReadFrame do
     it { expect(subject.value.type).to eq 1 }
     it { expect(subject.value.channel).to eq 0 }
     it { expect(subject.value.size).to eq 4 }
-    it { expect(subject.value.payload).to eq "AMQP" }
+    it { expect(subject.value.payload).to eq 'AMQP' }
     it { expect(subject.value.end).to eq "\xCE".b }
   end
 end

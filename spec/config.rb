@@ -1,5 +1,6 @@
-require 'settingslogic'
+# frozen_string_literal: true
 
+require 'settingslogic'
 
 class Settings < Settingslogic
   source File.expand_path('../config.yml', __FILE__)

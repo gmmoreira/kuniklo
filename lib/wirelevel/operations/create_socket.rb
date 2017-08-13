@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Wirelevel::Operations::CreateSocket
   include Transaction::Operation
 
@@ -6,11 +8,10 @@ class Wirelevel::Operations::CreateSocket
       Socket.tcp settings.host, settings.port
     end
       .to_either
-      .fmap -> socket { Wirelevel::Socket.new(socket) }
+      .fmap ->(socket) { Wirelevel::Socket.new(socket) }
   end
 
   Container.register('wirelevel.operations.create_socket') do
-    self.new
+    new
   end
 end
-

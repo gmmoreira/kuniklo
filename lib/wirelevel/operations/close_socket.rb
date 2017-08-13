@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Wirelevel::Operations::CloseSocket
   include Transaction::Operation
 

@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 class Wirelevel::Operations::WriteProtocol
   include Transaction::Operation
 
-  PROTOCOL = "AMQP\x0\x0\x9\x1".freeze
+  PROTOCOL = "AMQP\x0\x0\x9\x1"
 
   def call(socket)
     Try() do

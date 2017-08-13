@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'forwardable'
 
 class Wirelevel::Socket
@@ -10,7 +12,7 @@ class Wirelevel::Socket
 
   def initialize(socket)
     @socket = socket
-    @buffer = ""
+    @buffer = ''
   end
 
   def read(maxlen, *options)

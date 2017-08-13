@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module ReadFixture
   def read_fixture(name, *options)
     dir = File.expand_path('../../fixtures', __FILE__)

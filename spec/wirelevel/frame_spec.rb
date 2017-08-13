@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 RSpec.describe Wirelevel::Frame do
@@ -5,12 +7,14 @@ RSpec.describe Wirelevel::Frame do
     let(:type) { 1 }
     let(:channel) { 0 }
     let(:size) { 4 }
-    let(:payload) { "AMQP".b }
+    let(:payload) { 'AMQP'.b }
     let(:frame_end) { "\xCE".b }
 
-    subject { described_class.new(type: type, channel: channel,
-                                  size: size, payload: payload,
-                                  end: frame_end) }
+    subject do
+      described_class.new(type: type, channel: channel,
+                          size: size, payload: payload,
+                          end: frame_end)
+    end
 
     context 'valid values' do
       it { is_expected.to be_kind_of(described_class) }
@@ -23,7 +27,7 @@ RSpec.describe Wirelevel::Frame do
     end
 
     context 'when invalid channel' do
-      let(:channel) { 100000 }
+      let(:channel) { 100_000 }
 
       it { expect { subject }.to raise_error(Dry::Struct::Error) }
     end

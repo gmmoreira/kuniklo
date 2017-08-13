@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Wirelevel::Frame < Dry::Struct
   constructor_type :strict
 

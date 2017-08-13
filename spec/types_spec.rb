@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 RSpec.describe Types do
@@ -76,7 +78,7 @@ RSpec.describe Types do
       end
 
       describe '65535' do
-        it { expect(subject[65535]).to eq 65535 }
+        it { expect(subject[65_535]).to eq 65_535 }
       end
     end
 
@@ -86,7 +88,7 @@ RSpec.describe Types do
       end
 
       describe '65536' do
-        it { expect { subject[65536] }.to raise_error(Dry::Types::ConstraintError) }
+        it { expect { subject[65_536] }.to raise_error(Dry::Types::ConstraintError) }
       end
     end
   end

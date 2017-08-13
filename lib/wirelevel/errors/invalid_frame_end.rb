@@ -1,3 +1,4 @@
-class Wirelevel::Errors::InvalidFrameEnd < StandardError
+# frozen_string_literal: true
 
+class Wirelevel::Errors::InvalidFrameEnd < StandardError
 end
