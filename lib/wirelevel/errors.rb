@@ -1,0 +1,1 @@
+module Wirelevel::Errors; end
