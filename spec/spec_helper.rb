@@ -24,7 +24,7 @@ require 'rspec/its'
 require 'pry'
 require 'config'
 require 'support/read_fixture'
-require 'dry-amqp-client'
+require 'kuniklo'
 require 'dry/container/stub'
 
 Container.enable_stubs!
