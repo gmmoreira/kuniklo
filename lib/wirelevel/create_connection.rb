@@ -7,4 +7,5 @@ class Wirelevel::CreateConnection
   step :write_protocol, with: 'wirelevel.operations.write_protocol'
   step :read_socket, with: 'wirelevel.operations.read_socket'
   step :validate_protocol, with: 'wirelevel.operations.validate_protocol'
+  step :create_connection, with: 'wirelevel.operations.create_connection'
 end

@@ -20,6 +20,7 @@ SimpleCov.start
 lib = File.expand_path("../../lib", __FILE__)
 $LOAD_PATH.unshift lib
 
+require 'rspec/its'
 require 'pry'
 require 'config'
 require 'support/read_fixture'

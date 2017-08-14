@@ -11,8 +11,9 @@ class Wirelevel::Operations::WriteProtocol
       socket
     end.to_either
   end
+
+  Container.register('wirelevel.operations.write_protocol') do
+    self.new
+  end
 end
 
-Container.register('wirelevel.operations.write_protocol') do
-  Wirelevel::Operations::WriteProtocol.new
-end

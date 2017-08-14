@@ -17,6 +17,6 @@ class Wirelevel::Operations::ValidateProtocol
   end
 
   Container.register('wirelevel.operations.validate_protocol') do
-    Wirelevel::Operations::ValidateProtocol.new
+    self.new
   end
 end

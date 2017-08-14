@@ -9,7 +9,7 @@ RSpec.describe Wirelevel::Operations::ValidateProtocol do
 
   context 'when valid protocol' do
     before do
-      allow(socket).to receive(:buffer).and_return(read_fixture('connection_open.bin'))
+      allow(socket).to receive(:buffer).and_return(read_fixture('connection_start.bin'))
     end
 
     it { is_expected.to be_success }

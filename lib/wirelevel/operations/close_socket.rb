@@ -6,10 +6,11 @@ class Wirelevel::Operations::CloseSocket
   def call(socket)
     Try() do
       socket.close
-    end
+    end.to_either
+  end
+
+  Container.register('wirelevel.operations.close_socket') do
+    self.new
   end
 end
 
-Container.register('wirelevel.operations.close_socket') do
-  Wirelevel::Operations::CloseSocket.new
-end

@@ -12,6 +12,6 @@ class Wirelevel::Operations::ReadSocket
   end
 
   Container.register('wirelevel.operations.read_socket') do
-    new
+    self.new
   end
 end

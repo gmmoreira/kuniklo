@@ -13,6 +13,7 @@ gem 'settingslogic'
 
 group :development, :test do
   gem 'rspec'
+  gem 'rspec-its'
 end
 
 group :test do
