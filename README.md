@@ -1,3 +1,5 @@
+[travis]: https://travis-ci.org/gmmoreira/kuniklo
+
 # Kuniklo
 
 AMQP 0.9.1 client
