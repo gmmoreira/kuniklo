@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 Gem::Specification.new do |s|
   s.name        = 'Kuniklo'
   s.version     = '0.0.0'
   s.licenses    = ['MIT']
-  s.summary     = "AMQP Client"
-  s.description = "AMQP 0.9.1 Client"
-  s.authors     = ["Guilherme Maganha Moreira"]
+  s.summary     = 'AMQP Client'
+  s.description = 'AMQP 0.9.1 Client'
+  s.authors     = ['Guilherme Maganha Moreira']
   s.email       = 'guilhermerx7@gmail.com'
   s.files       = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) } - ['bin/console']
   s.homepage    = 'https://github.com/gmmoreira/kuniklo'

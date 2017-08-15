@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
+# require 'spec_helper'
 
 RSpec.describe Types do
   describe Types::MethodFrameType do
@@ -35,7 +35,7 @@ RSpec.describe Types do
 
   describe Types::HeartbeatFrameType do
     context 'valid value' do
-      it { expect(subject[4]).to eq 4 }
+      it { expect(subject[8]).to eq 8 }
     end
 
     context 'invalid value' do
@@ -45,7 +45,7 @@ RSpec.describe Types do
 
   describe Types::FrameType do
     context 'valid values' do
-      [1, 2, 3, 4].each do |value|
+      [1, 2, 3, 8].each do |value|
         it { expect(subject[value]).to eq value }
       end
     end

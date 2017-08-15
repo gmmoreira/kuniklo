@@ -10,7 +10,6 @@ class Wirelevel::Operations::CloseSocket
   end
 
   Container.register('wirelevel.operations.close_socket') do
-    self.new
+    new
   end
 end
-

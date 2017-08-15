@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Wirelevel
   class Connection
     class Start < Dry::Struct

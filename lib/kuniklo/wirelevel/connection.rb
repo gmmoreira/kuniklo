@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Wirelevel
   class Connection
     include Import['wirelevel.connection_start']
@@ -11,7 +13,7 @@ module Wirelevel
     end
 
     def start
-      connection_start.(socket)
+      connection_start.call(socket)
     end
   end
 end

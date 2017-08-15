@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Wirelevel
   module Operations
     module Connection
@@ -8,12 +10,12 @@ module Wirelevel
 
         def call(method)
           Right(method.arguments)
-            .fmap { |arguments| arguments.unpack("cca*") }
+            .fmap { |arguments| arguments.unpack('cca*') }
             .bind do |version_major, version_minor, arguments|
 
             decode_field_table.call(arguments).bind do |server_properties, data|
               decode_long_string.call(data).bind do |mechanisms, data|
-                decode_long_string.call(data).fmap do |locales, data|
+                decode_long_string.call(data).fmap do |locales, _data|
                   Wirelevel::Connection::Start.new(version_major: version_major,
                                                    version_minor: version_minor,
                                                    server_properties: server_properties,
@@ -26,7 +28,7 @@ module Wirelevel
         end
 
         Container.register('wirelevel.operations.connection.decode_start') do
-          self.new
+          new
         end
       end
     end

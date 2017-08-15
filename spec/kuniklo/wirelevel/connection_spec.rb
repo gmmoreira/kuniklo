@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 RSpec.describe Wirelevel::Connection do
@@ -6,7 +8,6 @@ RSpec.describe Wirelevel::Connection do
   subject { described_class.new(socket) }
 
   describe 'attributes' do
-
     its(:socket) { is_expected.to be socket }
   end
 

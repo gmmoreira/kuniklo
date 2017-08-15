@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Wirelevel
   module Operations
     class DecodeBoolean
@@ -10,7 +12,7 @@ module Wirelevel
       end
 
       Container.register('wirelevel.operations.decode_boolean') do
-        self.new
+        new
       end
     end
   end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Wirelevel
   module Operations
     class DecodeFieldTable
@@ -7,7 +9,7 @@ module Wirelevel
 
       def call(data)
         result = {}
-        Right(data.unpack("Na*")).fmap do |size, table_data|
+        Right(data.unpack('Na*')).fmap do |size, table_data|
           count = 0
 
           begin
@@ -34,7 +36,7 @@ module Wirelevel
       end
 
       Container.register('wirelevel.operations.decode_field_table') do
-        self.new
+        new
       end
     end
   end

@@ -12,6 +12,6 @@ class Wirelevel::Operations::CreateSocket
   end
 
   Container.register('wirelevel.operations.create_socket') do
-    self.new
+    new
   end
 end

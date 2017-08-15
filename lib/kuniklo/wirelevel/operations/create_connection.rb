@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Wirelevel
   module Operations
     class CreateConnection
@@ -8,7 +10,7 @@ module Wirelevel
       end
 
       Container.register('wirelevel.operations.create_connection') do
-        self.new
+        new
       end
     end
   end

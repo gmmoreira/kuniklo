@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Wirelevel
   module Operations
     class DecodeLongString
@@ -10,7 +12,7 @@ module Wirelevel
       end
 
       Container.register('wirelevel.operations.decode_long_string') do
-        self.new
+        new
       end
     end
   end

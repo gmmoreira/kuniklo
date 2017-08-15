@@ -13,7 +13,6 @@ class Wirelevel::Operations::WriteProtocol
   end
 
   Container.register('wirelevel.operations.write_protocol') do
-    self.new
+    new
   end
 end
-

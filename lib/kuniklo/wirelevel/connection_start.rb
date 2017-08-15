@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Wirelevel
   class ConnectionStart
     include Transaction
@@ -7,7 +9,7 @@ module Wirelevel
     step :decode_start, with: 'wirelevel.operations.connection.decode_start'
 
     Container.register('wirelevel.connection_start') do
-      self.new
+      new
     end
   end
 end

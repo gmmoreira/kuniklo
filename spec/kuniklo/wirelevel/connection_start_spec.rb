@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 RSpec.describe Wirelevel::ConnectionStart do
@@ -12,8 +14,8 @@ RSpec.describe Wirelevel::ConnectionStart do
     end
   end
 
- # before do
- #   Container.stub('wirelevel.operations.read_frame', read_frame)
- #   Container.stub('wirelevel.operations.connection.decode_start', decode_start)
- # end
+  # before do
+  #   Container.stub('wirelevel.operations.read_frame', read_frame)
+  #   Container.stub('wirelevel.operations.connection.decode_start', decode_start)
+  # end
 end
