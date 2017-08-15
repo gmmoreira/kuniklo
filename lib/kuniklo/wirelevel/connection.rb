@@ -2,7 +2,7 @@
 
 module Wirelevel
   class Connection
-    include Import['wirelevel.connection_start']
+    include Import['wirelevel.connection.methods.start']
 
     attr_reader :socket
 
@@ -13,7 +13,7 @@ module Wirelevel
     end
 
     def start
-      connection_start.call(socket)
+      super.call(socket)
     end
   end
 end

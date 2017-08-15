@@ -1,3 +1,5 @@
 # frozen_string_literal: true
 
-module Wirelevel::Errors; end
+module Wirelevel
+  module Errors; end
+end

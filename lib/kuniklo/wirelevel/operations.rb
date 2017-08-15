@@ -1,3 +1,5 @@
 # frozen_string_literal: true
 
-module Wirelevel::Operations; end
+module Wirelevel
+  module Operations; end
+end

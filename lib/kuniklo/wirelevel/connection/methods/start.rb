@@ -8,7 +8,7 @@ module Wirelevel
     step :decode_method, with: 'wirelevel.operations.decode_method'
     step :decode_start, with: 'wirelevel.operations.connection.decode_start'
 
-    Container.register('wirelevel.connection_start') do
+    Container.register('wirelevel.connection.methods.start') do
       new
     end
   end
