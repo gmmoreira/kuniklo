@@ -12,11 +12,12 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'dry-auto_inject', '~> 0.4.0'
   s.add_runtime_dependency 'dry-monads', '~> 0.3.0'
   s.add_runtime_dependency 'dry-struct', '~> 0.3.0'
+  s.add_runtime_dependency 'dry-system', '~> 0.7.0'
   s.add_runtime_dependency 'dry-transaction', '~> 0.10.0'
   s.add_runtime_dependency 'dry-types', '~> 0.11.0'
   s.add_runtime_dependency 'settingslogic', '~> 2.0.0'
 
-  s.add_development_dependency 'bundler', '= 1.15.3'
+  s.add_development_dependency 'bundler', '~> 1.15.0'
   s.add_development_dependency 'guard-rspec', '~> 4.7.0'
   s.add_development_dependency 'pry', '~> 0.10.0'
   s.add_development_dependency 'rspec', '~> 3.6.0'
