@@ -5,6 +5,7 @@ PATH
       dry-auto_inject (~> 0.4.0)
       dry-monads (~> 0.3.0)
       dry-struct (~> 0.3.0)
+      dry-system (~> 0.7.0)
       dry-transaction (~> 0.10.0)
       dry-types (~> 0.11.0)
       settingslogic (~> 2.0.0)
@@ -41,6 +42,14 @@ GEM
       dry-equalizer (~> 0.2)
       dry-types (~> 0.9, >= 0.9.0)
       ice_nine (~> 0.11)
+    dry-system (0.7.3)
+      concurrent-ruby (~> 1.0)
+      dry-auto_inject (>= 0.4.0)
+      dry-configurable (~> 0.7, >= 0.7.0)
+      dry-container (~> 0.6)
+      dry-core (>= 0.3.1)
+      dry-equalizer (~> 0.2)
+      inflecto (>= 0.0.2)
     dry-transaction (0.10.2)
       dry-container (>= 0.2.8)
       dry-matcher (>= 0.5.0)
@@ -139,7 +148,7 @@ PLATFORMS
 
 DEPENDENCIES
   Kuniklo!
-  bundler (= 1.15.3)
+  bundler (~> 1.15.0)
   guard-rspec (~> 4.7.0)
   pry (~> 0.10.0)
   rspec (~> 3.6.0)
