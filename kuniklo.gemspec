@@ -11,7 +11,6 @@ Gem::Specification.new do |s|
   s.files       = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) } - ['bin/console']
   s.homepage    = 'https://github.com/gmmoreira/kuniklo'
 
-  s.add_runtime_dependency 'dry-auto_inject', '~> 0.4.0'
   s.add_runtime_dependency 'dry-monads', '~> 0.3.0'
   s.add_runtime_dependency 'dry-struct', '~> 0.3.0'
   s.add_runtime_dependency 'dry-system', '~> 0.7.0'

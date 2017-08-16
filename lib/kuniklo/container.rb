@@ -1,5 +1,11 @@
 # frozen_string_literal: true
 
-class Container
-  extend Dry::Container::Mixin
+module Kuniklo
+  class Container < Dry::System::Container
+    configure do |config|
+      config.auto_register = 'lib'
+    end
+
+    load_paths!('lib')
+  end
 end

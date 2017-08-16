@@ -2,26 +2,28 @@
 
 require 'forwardable'
 
-module Wirelevel
-  class Socket
-    extend Forwardable
+module Kuniklo
+  module Wirelevel
+    class Socket
+      extend Forwardable
 
-    attr_reader :socket
-    attr_reader :buffer
+      attr_reader :socket
+      attr_reader :buffer
 
-    def_delegator :@socket, :close
+      def_delegator :@socket, :close
 
-    def initialize(socket)
-      @socket = socket
-      @buffer = ''
-    end
+      def initialize(socket)
+        @socket = socket
+        @buffer = ''
+      end
 
-    def read(maxlen, *options)
-      @buffer = socket.recv(maxlen, *options)
-    end
+      def read(maxlen, *options)
+        @buffer = socket.recv(maxlen, *options)
+      end
 
-    def write(data)
-      socket.send(data, 0)
+      def write(data)
+        socket.send(data, 0)
+      end
     end
   end
 end

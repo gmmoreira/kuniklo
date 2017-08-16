@@ -1,3 +1,5 @@
 # frozen_string_literal: true
 
-module Wirelevel; end
+module Kuniklo
+  module Wirelevel; end
+end

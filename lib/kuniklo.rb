@@ -1,12 +1,13 @@
 # frozen_string_literal: true
 
+module Kuniklo; end
+
 require 'socket'
 
 require 'dry-struct'
 require 'dry-types'
 require 'dry-monads'
-require 'dry-auto_inject'
-require 'dry-container'
+require 'dry/system/container'
 require 'dry-transaction'
 require 'dry/transaction/operation'
 
@@ -20,6 +21,7 @@ require 'kuniklo/wirelevel'
 require 'kuniklo/wirelevel/socket'
 require 'kuniklo/wirelevel/connection'
 require 'kuniklo/wirelevel/connection/start'
+require 'kuniklo/wirelevel/connection/methods'
 require 'kuniklo/wirelevel/connection/methods/start'
 require 'kuniklo/wirelevel/frame'
 require 'kuniklo/wirelevel/method'
@@ -43,3 +45,4 @@ require 'kuniklo/wirelevel/operations/field_value_matcher'
 require 'kuniklo/wirelevel/operations/connection'
 require 'kuniklo/wirelevel/operations/connection/decode_start'
 require 'kuniklo/wirelevel/create_connection'
+

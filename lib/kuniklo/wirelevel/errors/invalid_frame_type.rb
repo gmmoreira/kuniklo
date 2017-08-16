@@ -1,3 +1,9 @@
 # frozen_string_literal: true
 
-class Wirelevel::Errors::InvalidFrameType < StandardError; end
+module Kuniklo
+  module Wirelevel
+    module Errors
+      class InvalidFrameType < StandardError; end
+    end
+  end
+end

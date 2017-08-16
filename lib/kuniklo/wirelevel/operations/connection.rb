@@ -1,3 +1,9 @@
 # frozen_string_literal: true
 
-module Wirelevel::Operations::Connection; end
+module Kuniklo
+  module Wirelevel
+    module Operations
+      module Connection; end
+    end
+  end
+end

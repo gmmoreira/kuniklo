@@ -25,10 +25,9 @@ require 'pry'
 require 'config'
 require 'support/read_fixture'
 require 'kuniklo'
-require 'dry/container/stub'
+require 'dry/system/stubs'
 
-Container.enable_stubs!
-
+Kuniklo::Container.enable_stubs!
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
