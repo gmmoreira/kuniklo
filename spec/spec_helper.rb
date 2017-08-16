@@ -28,6 +28,8 @@ require 'kuniklo'
 require 'dry/system/stubs'
 
 Kuniklo::Container.enable_stubs!
+# finalize Container, otherwise stubs wont work
+Kuniklo::Container.finalize!
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
